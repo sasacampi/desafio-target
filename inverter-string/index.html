@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Inversor de String</title>
+  </head>
+  <body>
+    <h1>Inversor de String</h1>
+    <form>
+      <label for="inputString">Digite a string:</label>
+      <input type="text" id="inputString" name="inputString"><br>
+      <button type="button" onclick="inverter()">Inverter</button>
+    </form>
+    <div id="resultado"></div>
+    <script>
+      function inverter() {
+        var string = document.getElementById("inputString").value;
+        
+        var novaString = "";
+        for (var i = string.length - 1; i >= 0; i--) {
+          novaString += string[i];
+        }
+        
+        document.getElementById("resultado").innerHTML = "String invertida: " + novaString;
+      }
+    </script>
+  </body>
+</html>
